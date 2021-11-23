@@ -1,0 +1,16 @@
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.csproj.AssemblyReference.cache
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.GeneratedMSBuildEditorConfig.editorconfig
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.AssemblyInfoInputs.cache
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.AssemblyInfo.cs
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.csproj.CoreCompileInputs.cache
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/elevador
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/elevador.deps.json
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/elevador.runtimeconfig.json
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/elevador.runtimeconfig.dev.json
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/elevador.dll
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/ref/elevador.dll
+/home/sena/Desktop/CSharp/elevador/bin/Debug/net5.0/elevador.pdb
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.dll
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/ref/elevador.dll
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.pdb
+/home/sena/Desktop/CSharp/elevador/obj/Debug/net5.0/elevador.genruntimeconfig.cache

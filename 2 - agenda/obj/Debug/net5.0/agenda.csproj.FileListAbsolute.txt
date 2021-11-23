@@ -1,0 +1,16 @@
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.csproj.AssemblyReference.cache
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.GeneratedMSBuildEditorConfig.editorconfig
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.AssemblyInfoInputs.cache
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.AssemblyInfo.cs
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.csproj.CoreCompileInputs.cache
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/agenda
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/agenda.deps.json
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/agenda.runtimeconfig.json
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/agenda.runtimeconfig.dev.json
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/agenda.dll
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/ref/agenda.dll
+/home/sena/Desktop/CSharp/agenda/bin/Debug/net5.0/agenda.pdb
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.dll
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/ref/agenda.dll
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.pdb
+/home/sena/Desktop/CSharp/agenda/obj/Debug/net5.0/agenda.genruntimeconfig.cache
