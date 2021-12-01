@@ -1,5 +1,6 @@
 using System;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace _3___document_validation
 {
@@ -24,8 +25,11 @@ namespace _3___document_validation
                 _cnpj = docNumber;
             }
         }
-        public bool isValid(string doc){
 
+        public bool isValid(string id){
+            
+            string doc = Regex.Replace(id, "[^0-9]+", "");
+            
             if(doc.Length != 14 && doc.Length != 11 || !InvalidNumbers(doc))
             {
                 Console.WriteLine ("Invalid argument length or document number.");
@@ -47,80 +51,79 @@ namespace _3___document_validation
         public bool CheckDocument(string doc)
         {
             int[] arr = new int[doc.Length];
-            int indice = 0;
-            int firstDigit = 0;
-            int secondDigit = 0;
-
-            foreach(char number in doc)
+ 
+            for(int index = 0; index < doc.Length; index ++)
             {
-                arr[indice] = (int)Char.GetNumericValue(number);
-                indice++;
+                arr[index] = (int)Char.GetNumericValue(doc[index]);
             }
 
             if(doc.Length == 11)
-                return CpfValidation(doc, firstDigit, secondDigit, arr);
+                return CpfValidation(0, 0, arr);
             
-            return CnpjValidation(doc, firstDigit, secondDigit, arr);
+            return CnpjValidation(0, 0, arr);
         }
 
-        public bool CpfValidation(string doc, int firstDigit, int secondDigit, int[] arr)
+        public bool CpfValidation(int firstDigit, int secondDigit, int[] arr)
         {
+            int restLimit = 10;
+            int rest = 0;
             
-            for(int i = 10; i > 1; i--)
+            for(int index = arr.Length - 1; index > 1; index--)
             {
-                firstDigit += arr[10 - i] * i;
+                firstDigit += arr[10 - index] * index;
             }
 
-            firstDigit = (firstDigit * 10 % 11) >= 10 ? 0 : (firstDigit * 10 % 11);
+            rest = firstDigit * 10 % 11;
+            firstDigit =  rest >= restLimit ? 0 : rest;
 
             if(firstDigit == arr[9])
             {
-                for(int i = arr.Length; i > 1; i--)
+                for(int index = arr.Length; index > 1; index--)
                 {
-                    secondDigit += arr[11 - i] * i;
+                    secondDigit += arr[11 - index] * index;
                 }
+                    rest = secondDigit * 10 % 11;
+                    secondDigit =  rest >= restLimit ? 0 : rest;
 
-                    secondDigit = (secondDigit * 10 % 11) >= 10 ? 0 : (secondDigit * 10 % 11);
-
-                    return secondDigit == arr[10];
-                    
+                    return secondDigit == arr[10]; 
             }    
             return false;
         }
 
-        public bool CnpjValidation(string doc, int firstDigit, int secondDigit, int[] arr)
+        public bool CnpjValidation(int firstDigit, int secondDigit, int[] arr)
         {
             int weight = 5;
+            int restLimit = 2;
+            int rest = 0;
 
-            for(int i = 0; i < arr.Length - 2; i++)
+            for(int index = 0; index < arr.Length - 2; index++)
             {
-                firstDigit += arr[i] * weight;
+                firstDigit += arr[index] * weight;
 
                 weight = (weight == 2) ? 9 : weight - 1;
             }
 
-
-            firstDigit = (firstDigit % 11) < 2 ? 0 : (11 - firstDigit % 11 );
+            rest = firstDigit % 11;
+            firstDigit = rest < restLimit ? 0 : 11 - rest;
 
             if(firstDigit == arr[12])
             {
-
                 weight = 6;
 
-                for(int i = 0; i < 13; i++)
+                for(int index = 0; index < 13; index++)
                 {
-                    secondDigit += arr[i] * weight;
+                    secondDigit += arr[index] * weight;
                     weight = (weight == 2) ? 9 : weight - 1;
                 }
 
-                    secondDigit = (secondDigit % 11) < 2 ? 0 : (11 - secondDigit % 11);
+                    rest = secondDigit % 11;
+                    secondDigit = rest < restLimit ? 0 : 11 - rest;
 
                     return secondDigit == arr[13];
                 
             }    
             return false;
         }
-
         public static bool InvalidNumbers(string doc){
             
             string[] repeatedDigits = 
