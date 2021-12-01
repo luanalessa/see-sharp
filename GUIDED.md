@@ -27,58 +27,12 @@ Por isso, o objetivo desse projeto é facilitar o aprendizado através de exempl
 
 # 📑 Conteudos
 
-* [Iniciando](#iniciando)
-* [Hello World](#hello-world)
-* [Comments](#comments)
 * [Variáveis](#variaveis)
+* [Conversão de tipos](#conversao)
+* [Tamanho de string](#tamanho)
 
 
 
-# 🏁 <a name="iniciando">Iniciando<a>
-<br/>
-
-Antes de instalar o .NET, adicione a chave de assinatura do pacote da Microsoft à lista de chaves confiáveis e adicione o repositório de pacotes com os seguintes comandos:
-
-```bash
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-```
-<br/>
-
-Após a conclusão, instale o SDK
-
-```bash
-sudo apt-get update; \
-  sudo apt-get install -y apt-transport-https && \
-  sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-5.0
-```
-<br/>
-
-E o RUNTIME:
-```bash
-sudo apt-get update; \
-  sudo apt-get install -y apt-transport-https && \
-  sudo apt-get update && \
-  sudo apt-get install -y aspnetcore-runtime-5.0
-```
-<br/>
-
-# 💻 Criando um novo projeto
-
-```bash
-dotnet new console
-```
-<br/>
-
-Para executar, basta digitar no terminal:
-
-```bash
-dotnet run
-```
-
-<br/>
 
   # 🔻 <a name="variaveis">Variaveis<a>
 <br/>
@@ -121,4 +75,86 @@ class MainClass {
 }
 ```
   
+# 🔻 <a name="conversao">Conversão de tipos<a>
+          
+```c#
+Convert.ToBoolean(x);    // Converts a type to a Boolean value
+Convert.ToByte(x);       // Converts a type to a byte
+Convert.ToChar(x);       // Converts a type to a single Unicode character
+Convert.ToDateTime(x);   // Converts a type (integer or string type) to date-time structures
+Convert.ToDecimal(x);    // Converts a floating point or integer type to a decimal type
+Convert.ToDouble(x);     // Converts a type to a double type
+Convert.ToInt16(x);      // Converts a type to a 16-bit integer
+Convert.ToInt32(x);      // Converts a type to a 32-bit integer
+Convert.ToInt64(x);      // Converts a type to a 64-bit integer
+Convert.ToSbyte(x);      // Converts a type to a signed byte type
+Convert.ToSingle(x);     // Converts a type to a small floating point number
+Convert.ToString(x);     // Converts a type to a string
+Convert.ToType(x);       // Converts a type to a specified type
+Convert.ToUInt16(x);     // Converts a type to an unsigned int type
+Convert.ToUInt32(x);     // Converts a type to an unsigned long type
+Convert.ToUInt64(x);     // Converts a type to an unsigned big integer
+```
+<br/>
+          
+          
+# 🔻 <a name="operadores">Operadores<a>
+          
+```c#
+// Arithmetic Operators
+x + y   // Adds two operands
+x - y   // Subtracts second operand from the first
+x * y   // Multiplies both operands
+x / y   // Divides numerator by de-numerator
+x % y   // Modulus Operator and remainder of after an integer division
+x++     // Increment operator increases integer value by one
+x--     // Decrement operator decreases integer value by one
+          
+// Relational Operators
+(x == y)   // Checks if the values of two operands are equal
+(x != y)   // Checks if the values of two operands are equal or not
+(x > y)    // Checks if the value of left operand is greater than the value of right operand
+(x < y)    // Checks if the value of left operand is less than the value of right operand
+(x >= y)   // Checks if the value of left operand is greater than or equal to the value of right operand
+(x <= y)   // Checks if the value of left operand is less than or equal to the value of right operand        
 
+// Logical Operators
+(x && y)   // Logical AND operator
+(x || y)   // Logical OR Operator
+!(x || y)  // Logical NOT Operator
+```
+<br/>
+          
+ # 🔻 <a name="decisao">Estrutura de decisão<a>
+          
+```c#
+if(boolean_expression1)
+{
+   /* boolean expression 1 is true */
+}
+else if (boolean_expression2)
+{
+   /* boolean expression 2 is true */
+}
+else
+{
+   /* expression 1 and 2 are false */
+}
+          
+```c#
+switch(place)
+{
+   case 1  :
+      Console.WriteLine("First!");
+      break; 
+   case 2  :
+      Console.WriteLine("Second!");
+      break; 
+   default : /* Optional */
+      Console.WriteLine("Invalid place!");
+      break; 
+}
+```
+<br/>
+          
+    
