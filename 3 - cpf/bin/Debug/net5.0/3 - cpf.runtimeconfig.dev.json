@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/home/sena/.dotnet/store/|arch|/|tfm|",
-      "/home/sena/.nuget/packages"
-    ]
-  }
-}

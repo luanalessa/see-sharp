@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>_3___cpf</RootNamespace>
+    <RootNamespace>_3___document_validation</RootNamespace>
   </PropertyGroup>
 
 </Project>
