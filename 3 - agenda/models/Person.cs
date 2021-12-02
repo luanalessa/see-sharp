@@ -5,7 +5,7 @@ namespace models
 {
     public class Person : Agenda
     {
-        public string _name;
+        public string Name;
         private string _address;
         private string _email;
         private string _document;
@@ -17,7 +17,7 @@ namespace models
             if(doc.isValid(document))
             {
                 _document = document;
-                _name = name;
+                Name = name;
                 _address = address;
                 _email = email;
             }

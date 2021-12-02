@@ -23,32 +23,33 @@ namespace _4___register
                 "Rua 9");  
             
             Agenda agenda = new Agenda();
+            Console.WriteLine(person.Name);
 
-            person.createContact(
-                "88999999999",
-                "Joao Pedro Saraceni",
-                "joao@gmail.com",
-                "Rua 7"
-            );
+            // person.createContact(
+            //     "88999999999",
+            //     "Joao Pedro Saraceni",
+            //     "joao@gmail.com",
+            //     "Rua 7"
+            // );
 
-            person.createContact(
-                "88999999993",
-                "Luana Lessa Sena",
-                "lessa@gmail.com",
-                "Rua 8"
-            );
+            // person.createContact(
+            //     "88999999993",
+            //     "Luana Lessa Sena",
+            //     "lessa@gmail.com",
+            //     "Rua 8"
+            // );
 
-            person.updateContact(
-                "88999999993",
-                "Luana Lessa Sena",
-                "lessa@gmail.com",
-                "Rua 13"
-            );
+            // person.updateContact(
+            //     "88999999993",
+            //     "Luana Lessa Sena",
+            //     "lessa@gmail.com",
+            //     "Rua 13"
+            // );
 
-            person.readContact();
+            // person.readContact();
 
-            person.deleteContact("88999999999");
-            person.readContact();
+            // person.deleteContact("88999999999");
+            // person.readContact();
 
 
 

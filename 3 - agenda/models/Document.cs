@@ -16,9 +16,7 @@ namespace models
                 return false;
             }
             
-            bool isChecked = CheckDocument(doc);
-
-            if(isChecked)
+            if(CheckDigits(doc))
             {
                 Console.WriteLine ("Valid document number.");
                 return true;
@@ -28,7 +26,7 @@ namespace models
             return false;               
         }
 
-        public bool CheckDocument(string doc)
+        public bool CheckDigits(string doc)
         {
             int[] arr = new int[doc.Length];
  
