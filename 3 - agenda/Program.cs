@@ -45,7 +45,11 @@ namespace _4___register
                 "Rua 13"
             );
 
-            Console.WriteLine(person.readContact());
+            person.readContact();
+
+            person.deleteContact("88999999999");
+            person.readContact();
+
 
 
         }

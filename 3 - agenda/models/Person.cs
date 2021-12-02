@@ -22,5 +22,6 @@ namespace models
                 _email = email;
             }
         }
+
     }
 }

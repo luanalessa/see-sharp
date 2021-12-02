@@ -15,21 +15,22 @@ namespace models
             {
                 return true;
             }
-            return true;
+            return false;
         }
 
-        public void createContact(string number, string name, string address, string email)
+        public bool createContact(string number, string name, string address, string email)
         {
 
-             if(searchContact(number))
+             if(!searchContact(number))
             {   
                 string[] data = { name, address, email };
                 acounts.Add(number, data);
                 Console.WriteLine("Contact added successfully!");
-                return;
+                return true;
             }
             
             Console.WriteLine("Contact not found!");
+            return false;
         }  
           
         public Dictionary<string, string[]> readContact(string number = null){
@@ -45,32 +46,39 @@ namespace models
                 search = acounts;
             }
 
-            // foreach (string id in search.Keys)
-            // {
-            //     Console.WriteLine("-------------------------------------------------");
-            //     Console.WriteLine("Nome: " + search[id][0]);
-            //     Console.WriteLine("number: " + id);
-            //     Console.WriteLine("Endereço: " + search[id][1]);
-            //     Console.WriteLine("Email: " + search[id][2]);
-            //     Console.WriteLine("-------------------------------------------------");
-            // }
-            
+            foreach (string id in search.Keys)
+            {
+                Console.WriteLine("-------------------------------------------------");
+                Console.WriteLine("Nome: " + search[id][0]);
+                Console.WriteLine("number: " + id);
+                Console.WriteLine("Endereço: " + search[id][1]);
+                Console.WriteLine("Email: " + search[id][2]);
+                Console.WriteLine("-------------------------------------------------");
+            }
+
             return search;
         }
 
-        public void deleteContact(string number)
+        public bool deleteContact(string number)
         {
-            acounts.Remove(number);
+            if(searchContact(number))
+                {   
+                     acounts.Remove(number);
+                     return true;
+                }
+            return false;
         }
 
-        public void updateContact(string number, string name, string address, string email)
+        public bool updateContact(string number, string name, string address, string email)
         {
             string[] newData = { name, address, email };
 
             if(searchContact(number))
             {
                 acounts[number] = newData;
+                return true;
             }
+            return false;
         }
     }    
 }
