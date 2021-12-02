@@ -9,7 +9,6 @@ namespace models
         private string _address;
         private string _email;
         private string _document;
-        private Agenda _agenda = new Agenda();
         
         public Person(string document, string name, string address, string email )
         {
@@ -23,6 +22,5 @@ namespace models
                 _email = email;
             }
         }
-
     }
 }

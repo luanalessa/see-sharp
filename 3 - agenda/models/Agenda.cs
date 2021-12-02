@@ -7,25 +7,24 @@ namespace models
     {
         public Dictionary<string, string[]> acounts = new Dictionary<string, string[]>();
 
-        public string[] searchContact(string document)
+        public bool searchContact(string number)
         {
             string[] userData = new string[3];
-            foreach(string key in acounts.Keys )
+ 
+            if(acounts.ContainsKey(number))
             {
-                if(key == document) 
-                   userData = acounts[key];
+                return true;
             }
-            return userData;
+            return true;
         }
 
-        public void addContact(string document, string name, string address, string email)
+        public void createContact(string number, string name, string address, string email)
         {
-            string[] contact = searchContact(document);
 
-             if(contact[0] == null)
+             if(searchContact(number))
             {   
                 string[] data = { name, address, email };
-                acounts.Add(document, data);
+                acounts.Add(number, data);
                 Console.WriteLine("Contact added successfully!");
                 return;
             }
@@ -33,43 +32,44 @@ namespace models
             Console.WriteLine("Contact not found!");
         }  
           
-        public void showContacts(string document = null){
+        public Dictionary<string, string[]> readContact(string number = null){
             
             Dictionary<string, string[]> search = new Dictionary<string, string[]>();
 
-            if(document != null)
+            if(number != null)
             {
-                search.Add(document,searchContact(document));
+                search.Add(number,acounts[number]);
             }
             else
             {
                 search = acounts;
             }
 
-            foreach (string id in search.Keys)
-            {
-                Console.WriteLine("-------------------------------------------------");
-                Console.WriteLine("Nome: " + search[id][0]);
-                Console.WriteLine("Cpf: " + id);
-                Console.WriteLine("Endereço: " + search[id][1]);
-                Console.WriteLine("Email: " + search[id][2]);
-                Console.WriteLine("-------------------------------------------------");
-            }
+            // foreach (string id in search.Keys)
+            // {
+            //     Console.WriteLine("-------------------------------------------------");
+            //     Console.WriteLine("Nome: " + search[id][0]);
+            //     Console.WriteLine("number: " + id);
+            //     Console.WriteLine("Endereço: " + search[id][1]);
+            //     Console.WriteLine("Email: " + search[id][2]);
+            //     Console.WriteLine("-------------------------------------------------");
+            // }
+            
+            return search;
         }
 
-        public void removeContact(string document)
+        public void deleteContact(string number)
         {
-            acounts.Remove(document);
+            acounts.Remove(number);
         }
 
-        public void editContact(string document, string name, string address, string email)
+        public void updateContact(string number, string name, string address, string email)
         {
-            string[] contact = searchContact(document);
-            string[] editedContact = { name, address, email };
+            string[] newData = { name, address, email };
 
-            if(contact != null)
+            if(searchContact(number))
             {
-                acounts[document] = editedContact;
+                acounts[number] = newData;
             }
         }
     }    

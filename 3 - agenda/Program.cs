@@ -24,27 +24,28 @@ namespace _4___register
             
             Agenda agenda = new Agenda();
 
-            person.addContact(
-                "12345678910",
+            person.createContact(
+                "88999999999",
                 "Joao Pedro Saraceni",
                 "joao@gmail.com",
                 "Rua 7"
             );
 
-            person.addContact(
-                "123",
+            person.createContact(
+                "88999999993",
                 "Luana Lessa Sena",
                 "lessa@gmail.com",
                 "Rua 8"
             );
 
-            person.editContact(
-                "123",
+            person.updateContact(
+                "88999999993",
                 "Luana Lessa Sena",
                 "lessa@gmail.com",
                 "Rua 13"
             );
-            person.showContacts();
+
+            Console.WriteLine(person.readContact());
 
 
         }
