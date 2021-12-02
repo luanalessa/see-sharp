@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace controllers
+namespace models
 {
     public class Person : Agenda
     {

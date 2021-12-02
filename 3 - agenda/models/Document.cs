@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace controllers
+namespace models
 {
     public class Document
     {

@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-namespace controllers
+namespace models
 {
     public class Agenda
     {
         public Dictionary<string, string[]> acounts = new Dictionary<string, string[]>();
 
-        public string[] searchUser(string document)
+        public string[] searchContact(string document)
         {
             string[] userData = new string[3];
             foreach(string key in acounts.Keys )
@@ -20,13 +20,17 @@ namespace controllers
 
         public void addContact(string document, string name, string address, string email)
         {
-            string[] userExist = searchUser(document);
+            string[] contact = searchContact(document);
 
-             if(userExist[0] == null)
-            {
+             if(contact[0] == null)
+            {   
                 string[] data = { name, address, email };
                 acounts.Add(document, data);
+                Console.WriteLine("Contact added successfully!");
+                return;
             }
+            
+            Console.WriteLine("Contact not found!");
         }  
           
         public void showContacts(string document = null){
@@ -35,7 +39,7 @@ namespace controllers
 
             if(document != null)
             {
-                search.Add(document,searchUser(document));
+                search.Add(document,searchContact(document));
             }
             else
             {
@@ -58,14 +62,15 @@ namespace controllers
             acounts.Remove(document);
         }
 
-        // public void editContact(string document, string document)
-        // {
-        //     foreach(string key in acounts.Keys )
-        //     {
-        //         if(key == document) 
-        //             return false;
-        //     }        
-        // }
+        public void editContact(string document, string name, string address, string email)
+        {
+            string[] contact = searchContact(document);
+            string[] editedContact = { name, address, email };
 
+            if(contact != null)
+            {
+                acounts[document] = editedContact;
+            }
+        }
     }    
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using controllers;
+using models;
 
 namespace _4___register
 {
@@ -16,16 +16,16 @@ namespace _4___register
             // Document doc5 = new Document("11.444.777/0001-61");    
             // Document doc6 = new Document("59360748000148");            
        
-            var person = new Person(
+            Person person = new Person(
                 "12345678909",
                 "Luana Lessa Sena",
                 "lessa@gmail.com",
                 "Rua 9");  
             
-            var agenda = new Agenda();
+            Agenda agenda = new Agenda();
 
             person.addContact(
-                "11111111111",
+                "12345678910",
                 "Joao Pedro Saraceni",
                 "joao@gmail.com",
                 "Rua 7"
@@ -38,11 +38,14 @@ namespace _4___register
                 "Rua 8"
             );
 
+            person.editContact(
+                "123",
+                "Luana Lessa Sena",
+                "lessa@gmail.com",
+                "Rua 13"
+            );
             person.showContacts();
 
-            // Agenda agenda = new Agenda();
-            // agenda.searchUser("12345678909");
-            // agenda.showAgenda();  
 
         }
     }
