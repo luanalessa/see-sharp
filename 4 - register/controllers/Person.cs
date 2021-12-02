@@ -10,6 +10,7 @@ namespace controllers
         private string _email;
         private string _document;
         private Agenda _agenda = new Agenda();
+        
         public Person(string document, string name, string address, string email )
         {
             Document doc = new Document();

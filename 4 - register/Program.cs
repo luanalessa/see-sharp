@@ -20,23 +20,25 @@ namespace _4___register
                 "12345678909",
                 "Luana Lessa Sena",
                 "lessa@gmail.com",
-                "Rua 7");  
+                "Rua 9");  
             
+            var agenda = new Agenda();
+
             person.addContact(
-                 "11111111111",
-                "Joao Lessa Sena",
-                "lessa@gmail.com",
+                "11111111111",
+                "Joao Pedro Saraceni",
+                "joao@gmail.com",
                 "Rua 7"
             );
 
             person.addContact(
-                 "60329978390",
-                "AAAAAAAAAAA Lessa Sena",
+                "123",
+                "Luana Lessa Sena",
                 "lessa@gmail.com",
-                "Rua 7"
+                "Rua 8"
             );
 
-            person.showAgenda();
+            person.showContacts("123");
 
             // Agenda agenda = new Agenda();
             // agenda.searchUser("12345678909");

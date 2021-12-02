@@ -5,27 +5,7 @@ namespace controllers
 {
     public class Document
     {
-       
-        // private string _cpf;
-        // private string _cnpj;
         
-
-        // public Document(string doc)
-        // {
-        //     string docNumber = Regex.Replace(doc, "[^0-9]+", "");
-        //     bool docValidation = isValid(docNumber);
-
-        //     if(docValidation && docNumber.Length == 11)
-        //     {
-        //        _cpf = docNumber;
-
-        //     }
-        //     else if(docValidation && docNumber.Length == 14)
-        //     {
-        //         _cnpj = docNumber;
-        //     }
-        // }
-
         public bool isValid(string id){
             
             string doc = Regex.Replace(id, "[^0-9]+", "");
