@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "4 - first bank of Springfield/1.0.0": {
+        "runtime": {
+          "4 - first bank of Springfield.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "4 - first bank of Springfield/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

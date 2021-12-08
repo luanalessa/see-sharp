@@ -1,0 +1,16 @@
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.csproj.AssemblyReference.cache
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.GeneratedMSBuildEditorConfig.editorconfig
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.AssemblyInfoInputs.cache
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.AssemblyInfo.cs
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.csproj.CoreCompileInputs.cache
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/4 - first bank of Springfield
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/4 - first bank of Springfield.deps.json
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/4 - first bank of Springfield.runtimeconfig.json
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/4 - first bank of Springfield.runtimeconfig.dev.json
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/4 - first bank of Springfield.dll
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/ref/4 - first bank of Springfield.dll
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/bin/Debug/net5.0/4 - first bank of Springfield.pdb
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.dll
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/ref/4 - first bank of Springfield.dll
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.pdb
+/home/sena/Desktop/stone/seesharp/4 - first bank of Springfield/obj/Debug/net5.0/4 - first bank of Springfield.genruntimeconfig.cache
