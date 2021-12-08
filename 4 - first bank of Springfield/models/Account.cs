@@ -10,7 +10,7 @@ namespace models
         private int _number;
         private int _agency;
         public int op;
-        private double _balaaance;
+        private double _balance;
 
 
         public Account(Client owner, int number, int agency, string type, double value)
@@ -69,11 +69,22 @@ namespace models
         {
             Balance += value;
         }
+
+        public bool Transfer(double value, Account account)
+        {
+            bool checkBalance = Withdraw(value);
+
+            if(!checkBalance) return false;
+
+            account.Deposit(value);
+            return true; 
+        }
      
         public void getBalance()
         {
             Console.WriteLine(Balance);
         }
+
 
     }
 }
