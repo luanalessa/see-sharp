@@ -1,6 +1,4 @@
 using System;
-using System.Globalization;
-
 namespace models
 {
     public class Account
@@ -10,30 +8,23 @@ namespace models
         private int _number;
         private int _agency;
         public int op;
-        private double _balance;
+        protected double _balance;
 
 
-        public Account(Client owner, int number, int agency, string type, double value)
+        public Account(Client owner, int number, int agency, int type, double value)
         {
 
-            if(type == "Savings Account")
+            if(type != 013 && type != 001)
             { 
-                op = 013;
-            }
-            else if(type == "Checking Account")
-            {
-                op = 001;
-            }
-            else
-            {
                 throw new ArgumentException(message: "Invalid argument");
             }
 
+            op = type;
+            
             _owner = owner;
             _number = number;
             _agency = agency;
             _initialDate =  DateTime.Now.ToString("hh:mm:ss tt");
-
             _balance = value;
 
 
@@ -56,9 +47,10 @@ namespace models
             } 
         }
 
-        public bool Withdraw(double value)
+        public virtual bool Withdraw(double value)
         {
-            if(_balance < value) return false;
+            //Qual o correto?
+            if(Balance < value) return false;
             
             Balance -= value;
 
