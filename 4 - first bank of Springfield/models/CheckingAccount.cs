@@ -8,12 +8,15 @@ namespace models
             _limite = limite;
         }
 
-        public override bool Withdraw(double value)
+        public override bool Withdraw(double value, bool insertTransaction = true)
         {
 
             if(_balance - value >= _limite) return false;
             
             _balance -= value;
+            
+            if(insertTransaction) newTransaction("outflow", value);
+
             return true;  
         } 
 
